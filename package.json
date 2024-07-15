@@ -2,12 +2,12 @@
   "name": "aes-js",
   "version": "1.0.0",
   "description": "Encrypt binary using AES in javascript.",
-  "main": "/dist/mjs.mjs",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "node ./test/index.js",
-    "pretty": "prettier ./src --write --config .prettierrc.js",
-    "build": "rollup --config"
+    "pretty": "prettier . --write --config .prettierrc.js",
+    "build": "node .esbuild.js"
   },
   "keywords": [
     "javascript"
@@ -15,9 +15,9 @@
   "author": "shinich39 <shinich39@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^3.3.2",
-    "rollup": "^4.18.1",
-    "@msgpack/msgpack": "^3.0.0-beta2"
+    "@msgpack/msgpack": "^3.0.0-beta2",
+    "esbuild": "^0.23.0",
+    "prettier": "^3.3.2"
   },
   "dependencies": {
     "crypto-js": "^4.2.0"
